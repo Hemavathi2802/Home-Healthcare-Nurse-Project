@@ -1,0 +1,51 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="rJ-oiJlWqkr1Ypn8Cw1E">
+    <mxGraphModel dx="1323" dy="715" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qSU4lfsAYo6GpHxXD6AM-1" edge="1" parent="1" source="qSU4lfsAYo6GpHxXD6AM-2" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qSU4lfsAYo6GpHxXD6AM-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qSU4lfsAYo6GpHxXD6AM-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Nurse" vertex="1">
+          <mxGeometry height="80" width="160" x="470" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="qSU4lfsAYo6GpHxXD6AM-3" edge="1" parent="1" source="qSU4lfsAYo6GpHxXD6AM-4" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qSU4lfsAYo6GpHxXD6AM-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qSU4lfsAYo6GpHxXD6AM-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Frotend&lt;div&gt;React&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="470" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="qSU4lfsAYo6GpHxXD6AM-5" edge="1" parent="1" source="qSU4lfsAYo6GpHxXD6AM-7" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qSU4lfsAYo6GpHxXD6AM-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qSU4lfsAYo6GpHxXD6AM-6" edge="1" parent="1" source="qSU4lfsAYo6GpHxXD6AM-7" style="edgeStyle=none;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="710" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qSU4lfsAYo6GpHxXD6AM-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Backend&lt;div&gt;Spring Boot&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="470" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="qSU4lfsAYo6GpHxXD6AM-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;Database&lt;/span&gt;&lt;/div&gt;&lt;div&gt;MySQL&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="470" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="qSU4lfsAYo6GpHxXD6AM-9" edge="1" parent="1" source="qSU4lfsAYo6GpHxXD6AM-10" style="edgeStyle=none;html=1;" target="qSU4lfsAYo6GpHxXD6AM-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qSU4lfsAYo6GpHxXD6AM-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Admin" vertex="1">
+          <mxGeometry height="80" width="160" x="710" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="qSU4lfsAYo6GpHxXD6AM-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Patient" vertex="1">
+          <mxGeometry height="80" width="160" x="230" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="qSU4lfsAYo6GpHxXD6AM-12" edge="1" parent="1" source="qSU4lfsAYo6GpHxXD6AM-11" style="edgeStyle=none;html=1;entryX=0.165;entryY=-0.046;entryDx=0;entryDy=0;entryPerimeter=0;" target="qSU4lfsAYo6GpHxXD6AM-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qSU4lfsAYo6GpHxXD6AM-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Email notification" vertex="1">
+          <mxGeometry height="80" width="160" x="710" y="470" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
