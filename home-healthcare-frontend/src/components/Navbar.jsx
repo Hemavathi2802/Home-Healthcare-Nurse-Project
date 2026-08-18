@@ -1,13 +1,30 @@
-import { Link } from "react-router-dom";
+import React from "react";
+import "./Navigation.css";
 
-function Navbar() {
+function Navigation({ onNavigate }) {
   return (
-    <nav>
-      <Link to="/login">Login</Link>
-      {" | "}
-      <Link to="/signup">Sign Up</Link>
+    <nav className="navigation">
+
+      <div className="logo">
+         Home Healthcare
+      </div>
+
+      <div className="nav-links">
+        <button onClick={() => onNavigate("home")}>
+          Home
+        </button>
+
+        <button onClick={() => onNavigate("login")}>
+          Login
+        </button>
+
+        <button onClick={() => onNavigate("signup")}>
+          Sign Up
+        </button>
+      </div>
+
     </nav>
   );
 }
 
-export default Navbar;
+export default Navigation;

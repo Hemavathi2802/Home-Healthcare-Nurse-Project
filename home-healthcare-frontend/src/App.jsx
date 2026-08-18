@@ -1,22 +1,64 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useState } from "react";
 
+import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import Dashboard from "./pages/Dashboard";
 import PatientManagement from "./pages/PatientManagement";
-import Navbar from "./components/Navbar";
+import NurseManagement from "./pages/NurseManagement";
+import AppointmentManagement from "./pages/AppointmentManagement";
+import VisitingSchedule from "./pages/VisitingSchedule";
+import VisitReport from "./pages/VisitReport";
+
+import "./App.css";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Navbar />
+  const [page, setPage] = useState("home");
 
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/patients" element={<PatientManagement />} />
-      </Routes>
-    </BrowserRouter>
+  const handleNavigate = (pageName) => {
+    setPage(pageName);
+  };
+
+  return (
+    <div>
+
+      {page === "home" && (
+        <Home onNavigate={handleNavigate} />
+      )}
+
+      {page === "login" && (
+        <Login onNavigate={handleNavigate} />
+      )}
+
+      {page === "signup" && (
+        <SignUp onNavigate={handleNavigate} />
+      )}
+
+      {page === "dashboard" && (
+        <Dashboard onNavigate={handleNavigate} />
+      )}
+
+      {page === "patients" && (
+        <PatientManagement onNavigate={handleNavigate} />
+      )}
+
+      {page === "nurses" && (
+        <NurseManagement onNavigate={handleNavigate} />
+      )}
+
+      {page === "appointments" && (
+        <AppointmentManagement onNavigate={handleNavigate} />
+      )}
+
+      {page === "schedule" && (
+        <VisitingSchedule onNavigate={handleNavigate} />
+      )}
+
+      {page === "reports" && (
+        <VisitReport onNavigate={handleNavigate} />
+      )}
+
+    </div>
   );
 }
 

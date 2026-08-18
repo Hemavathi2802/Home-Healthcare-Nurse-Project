@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./SignUp.css";
 
 function SignUp() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [role, setRole] = useState("");
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -19,77 +19,69 @@ function SignUp() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            name: name,
-            email: email,
-            password: password,
-            role: role,
+            name,
+            email,
+            password,
           }),
         }
       );
 
       if (response.ok) {
-        alert("Sign Up Successful!");
+        alert("Registration successful!");
       } else {
-        const data = await response.text();
-        console.log(data);
-        alert("Sign Up Failed");
+        alert("Registration failed!");
       }
     } catch (error) {
       console.error(error);
-      alert("Backend connection failed");
+      alert("Server connection failed!");
     }
   };
 
   return (
-    <div>
-      <h2>Sign Up</h2>
+    <div className="signup-container">
+      <div className="signup-box">
 
-      <form onSubmit={handleSignUp}>
-        <input
-          type="text"
-          placeholder="Full Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <br />
-        <br />
+        <h2>Create Account</h2>
+        <p>Sign up to continue to Home Healthcare</p>
 
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <br />
-        <br />
+        <form onSubmit={handleSignUp}>
 
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <br />
-        <br />
+          <label>Full Name</label>
+          <input
+            type="text"
+            placeholder="Enter your name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
 
-        <select
-          value={role}
-          onChange={(e) => setRole(e.target.value)}
-        >
-          <option value="">Select Role</option>
-          <option value="PATIENT">Patient</option>
-          <option value="NURSE">Nurse</option>
-        </select>
-        <br />
-        <br />
+          <label>Email</label>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
 
-        <button type="submit">Sign Up</button>
-      </form>
+          <label>Password</label>
+          <input
+            type="password"
+            placeholder="Enter your password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
 
-      <p>
-        Already have an account?{" "}
-        <Link to="/login">Login</Link>
-      </p>
+          <button type="submit">Sign Up</button>
+        </form>
+
+        <p className="login-link">
+          Already have an account?
+          <Link to="/login"> Login</Link>
+        </p>
+
+      </div>
     </div>
   );
 }

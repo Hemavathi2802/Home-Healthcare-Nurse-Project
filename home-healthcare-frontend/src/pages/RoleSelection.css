@@ -1,0 +1,199 @@
+.role-container {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #e8f8fa,
+    #f4f1ff
+  );
+
+  font-family: Arial, sans-serif;
+}
+
+.role-box {
+  width: 520px;
+
+  padding: 40px;
+
+  background: #ffffff;
+
+  border-radius: 14px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.role-box h2 {
+  margin: 0;
+
+  text-align: center;
+
+  color: #087f8c;
+
+  font-size: 28px;
+}
+
+.role-subtitle {
+  margin: 10px 0 28px;
+
+  text-align: center;
+
+  color: #777;
+
+  font-size: 14px;
+}
+
+.role-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.role-card {
+  display: flex;
+  align-items: center;
+
+  padding: 18px;
+
+  border: 1px solid #d9e2e5;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.role-card:hover {
+  border-color: #087f8c;
+
+  background: #f5fcfd;
+}
+
+.role-card.selected {
+  border-color: #087f8c;
+
+  background: #eaf8fa;
+
+  box-shadow: 0 0 0 2px rgba(8, 127, 140, 0.1);
+}
+
+.role-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 15px;
+
+  border-radius: 10px;
+
+  background: #e8f7f8;
+
+  font-size: 25px;
+}
+
+.role-content {
+  flex: 1;
+}
+
+.role-content h3 {
+  margin: 0 0 5px;
+
+  color: #263f47;
+
+  font-size: 17px;
+}
+
+.role-content p {
+  margin: 0;
+
+  color: #7c898e;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+.radio-circle {
+  width: 23px;
+  height: 23px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #c8d2d5;
+
+  border-radius: 50%;
+
+  color: white;
+
+  font-size: 12px;
+}
+
+.selected .radio-circle {
+  border-color: #087f8c;
+
+  background: #087f8c;
+}
+
+.continue-btn {
+  width: 100%;
+
+  margin-top: 25px;
+
+  padding: 13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #087f8c;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.continue-btn:hover {
+  background: #066b75;
+}
+
+.continue-btn span {
+  font-size: 19px;
+}
+
+@media (max-width: 550px) {
+  .role-box {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .role-box h2 {
+    font-size: 24px;
+  }
+
+  .role-card {
+    padding: 14px;
+  }
+}

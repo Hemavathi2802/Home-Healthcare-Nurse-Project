@@ -1,19 +1,19 @@
-.patient-page {
+.report-page {
   min-height: 100vh;
   background-color: #f5f9ff;
   padding: 40px;
   text-align: center;
 }
 
-.patient-page h1 {
+.report-page h1 {
   color: #1976d2;
 }
 
-.patient-page > p {
+.report-page > p {
   color: #666;
 }
 
-.patient-form {
+.report-form {
   background-color: white;
   max-width: 500px;
   margin: 30px auto;
@@ -22,32 +22,32 @@
   box-shadow: 0 2px 8px #ddd;
 }
 
-.patient-form h2,
-.patient-list h2 {
+.report-form h2,
+.report-list h2 {
   color: #1976d2;
 }
 
-.patient-form form {
+.report-form form {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.patient-form input,
-.patient-form select,
-.patient-form textarea {
+.report-form input,
+.report-form select,
+.report-form textarea {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 15px;
 }
 
-.patient-form textarea {
-  min-height: 80px;
+.report-form textarea {
+  min-height: 100px;
   resize: vertical;
 }
 
-.patient-form button {
+.report-form button {
   padding: 12px;
   background-color: #1976d2;
   color: white;
@@ -56,12 +56,12 @@
   cursor: pointer;
 }
 
-.patient-list {
-  max-width: 900px;
+.report-list {
+  max-width: 800px;
   margin: 40px auto;
 }
 
-.patient-card {
+.report-card {
   background-color: white;
   margin: 15px 0;
   padding: 20px;
@@ -70,7 +70,7 @@
   box-shadow: 0 2px 8px #ddd;
 }
 
-.patient-card h3 {
+.report-card h3 {
   color: #1976d2;
 }
 

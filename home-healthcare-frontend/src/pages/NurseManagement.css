@@ -1,19 +1,19 @@
-.patient-page {
+.nurse-page {
   min-height: 100vh;
   background-color: #f5f9ff;
   padding: 40px;
   text-align: center;
 }
 
-.patient-page h1 {
+.nurse-page h1 {
   color: #1976d2;
 }
 
-.patient-page > p {
+.nurse-page > p {
   color: #666;
 }
 
-.patient-form {
+.nurse-form {
   background-color: white;
   max-width: 500px;
   margin: 30px auto;
@@ -22,32 +22,24 @@
   box-shadow: 0 2px 8px #ddd;
 }
 
-.patient-form h2,
-.patient-list h2 {
+.nurse-form h2,
+.nurse-list h2 {
   color: #1976d2;
 }
 
-.patient-form form {
+.nurse-form form {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.patient-form input,
-.patient-form select,
-.patient-form textarea {
+.nurse-form input {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 15px;
 }
 
-.patient-form textarea {
-  min-height: 80px;
-  resize: vertical;
-}
-
-.patient-form button {
+.nurse-form button {
   padding: 12px;
   background-color: #1976d2;
   color: white;
@@ -56,12 +48,12 @@
   cursor: pointer;
 }
 
-.patient-list {
-  max-width: 900px;
+.nurse-list {
+  max-width: 800px;
   margin: 40px auto;
 }
 
-.patient-card {
+.nurse-card {
   background-color: white;
   margin: 15px 0;
   padding: 20px;
@@ -70,7 +62,7 @@
   box-shadow: 0 2px 8px #ddd;
 }
 
-.patient-card h3 {
+.nurse-card h3 {
   color: #1976d2;
 }
 
