@@ -8,25 +8,42 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    // Frontend testing only
-    if (email && password) {
-      alert("Login successful!");
+    try {
+      const response = await fetch(
+        `http://localhost:8080/api/users/login?email=${encodeURIComponent(
+          email
+        )}&password=${encodeURIComponent(password)}`,
+        {
+          method: "POST",
+        }
+      );
 
-      // Login → Role Selection
-      navigate("/role-selection");
-    } else {
-      alert("Please enter email and password");
+      if (response.ok) {
+        const user = await response.json();
+
+        console.log("Logged in user:", user);
+        alert("Login successful!");
+
+        // Login successful → Role Selection
+        navigate("/role-selection");
+      } else {
+        const message = await response.text();
+
+        console.log(message);
+        alert("Invalid email or password");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Backend connection failed");
     }
   };
 
   return (
     <div className="login-container">
-
       <div className="login-box">
-
         <h2>Welcome Back</h2>
 
         <p className="subtitle">
@@ -34,8 +51,6 @@ function Login() {
         </p>
 
         <form onSubmit={handleLogin}>
-
-          {/* EMAIL */}
           <label>Email</label>
 
           <input
@@ -46,7 +61,6 @@ function Login() {
             required
           />
 
-          {/* PASSWORD */}
           <label>Password</label>
 
           <input
@@ -57,23 +71,14 @@ function Login() {
             required
           />
 
-          {/* LOGIN BUTTON */}
-          <button type="submit">
-            Login
-          </button>
-
+          <button type="submit">Login</button>
         </form>
 
-        {/* SIGNUP */}
         <p className="signup-link">
           Don't have an account?{" "}
-          <Link to="/signup">
-            Sign Up
-          </Link>
+          <Link to="/signup">Sign Up</Link>
         </p>
-
       </div>
-
     </div>
   );
 }

@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import RoleSelection from "./pages/RoleSelection";
+
 import Dashboard from "./pages/Dashboard";
 import PatientManagement from "./pages/PatientManagement";
 import NurseManagement from "./pages/NurseManagement";
@@ -13,52 +17,47 @@ import VisitReport from "./pages/VisitReport";
 import "./App.css";
 
 function App() {
-  const [page, setPage] = useState("home");
-
-  const handleNavigate = (pageName) => {
-    setPage(pageName);
-  };
-
   return (
-    <div>
+    <BrowserRouter>
+      <Navbar />
 
-      {page === "home" && (
-        <Home onNavigate={handleNavigate} />
-      )}
+      <Routes>
+        {/* Main Pages */}
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/role-selection" element={<RoleSelection />} />
 
-      {page === "login" && (
-        <Login onNavigate={handleNavigate} />
-      )}
+        {/* Dashboard */}
+        <Route path="/dashboard" element={<Dashboard />} />
 
-      {page === "signup" && (
-        <SignUp onNavigate={handleNavigate} />
-      )}
+        {/* Core Modules */}
+        <Route
+          path="/patient-management"
+          element={<PatientManagement />}
+        />
 
-      {page === "dashboard" && (
-        <Dashboard onNavigate={handleNavigate} />
-      )}
+        <Route
+          path="/nurse-management"
+          element={<NurseManagement />}
+        />
 
-      {page === "patients" && (
-        <PatientManagement onNavigate={handleNavigate} />
-      )}
+        <Route
+          path="/appointment-management"
+          element={<AppointmentManagement />}
+        />
 
-      {page === "nurses" && (
-        <NurseManagement onNavigate={handleNavigate} />
-      )}
+        <Route
+          path="/visiting-schedule"
+          element={<VisitingSchedule />}
+        />
 
-      {page === "appointments" && (
-        <AppointmentManagement onNavigate={handleNavigate} />
-      )}
-
-      {page === "schedule" && (
-        <VisitingSchedule onNavigate={handleNavigate} />
-      )}
-
-      {page === "reports" && (
-        <VisitReport onNavigate={handleNavigate} />
-      )}
-
-    </div>
+        <Route
+          path="/visit-report"
+          element={<VisitReport />}
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
